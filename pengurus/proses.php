@@ -5,6 +5,7 @@
 
     if(isset($_POST['save'])){
         $aksi = $_POST['aksi'];
+        $id = $_POST['id'];
         $nama = $_POST['nama'];
         $jenisKelamin = $_POST['jenis_kelamin'];
         $agama = $_POST['agama'];
@@ -16,6 +17,12 @@
         if($aksi == "create"){
             $pengurus->create($nama, $jenisKelamin, $agama, $tanggalLahir, $noTelp, $email, $alamat);
             header('location:create.php');
+        }else if($aksi == "update"){
+            $pengurus->update($nama, $jenisKelamin, $agama, $tanggalLahir, $noTelp, $email, $alamat, $id);
+            header('location:index.php');
+        }else if($aksi == "delete"){
+            $pengurus->destroy($id);
+            header('location:index.php');
         }
 
     }

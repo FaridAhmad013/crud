@@ -1,46 +1,91 @@
-<?php 
-    include '../database.php';
-
-    $pengurus = new Pengurus();
+<?php
+include '../database.php';
+$pengurus = new Pengurus();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/asset/css/bootstrap.min.css">
 </head>
+
 <body>
-    <?php 
-        foreach($pengurus->show($_GET['id']) as $data){ ?>
-            <div>
-                Nama : <?php echo $data['nama']; ?>
-            </div>
-            
-            <div>
-                Jenis Kelamin : <?php echo $data['jenis_kelamin']; ?>
-            </div>
+<?php include '../layout/navbar.php';?>
 
-            <div>
-                Agama : <?php echo $data['agama']; ?>
-            </div>
+<?php foreach($pengurus->show($_GET['id']) as $data) {?>
+  <div class="d-flex justify-content-center align-items-center my-5">
+<div class="card mb-3 col-md-8 shadow-sm">
 
-            <div>
-                Tanggal Lahir  : <?php echo $data['tanggal_lahir']?>
-            </div>
+  <div class="row g-0">
 
-            <div>
-                No Telepon : <?php echo $data['no_telp']?>
-            </div>
+    <div class="col-md-4">
+      <img src="/asset/img/img1.jpeg" class="img-fluid rounded-start" alt="...">
+    </div>
 
-            <div>
-                Email : <?php echo $data['email']?>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><?php echo $data['nama']?></h5>
+        
+        <div class="mb-2 row">
+            <div class="col-md-6">Tanggal Lahir</div>
+            <div class="col-md-6">
+                <p class="fw-bold"><?php echo $data['tanggal_lahir']?></p>
             </div>
+        </div>
 
-            <div>
-                Alamat : <?php echo $data['alamat']?>
+        <div class="mb-2 row">
+            <div class="col-md-6">Jenis KeLamin</div>
+            <div class="col-md-6">
+                <p class="fw-bold"><?php echo $data['jenis_kelamin']?></p>
             </div>
-       <?php }?>
+        </div>
+
+        <div class="mb-2 row">
+            <div class="col-md-6">Agama</div>
+            <div class="col-md-6">
+                <p class="fw-bold"><?php echo $data['agama']?></</p>
+            </div>
+        </div>
+
+        <div class="mb-2 row">
+            <div class="col-md-6">Alamat</div>
+            <div class="col-md-6">
+            <p class="fw-bold"><?php echo $data['alamat']?></p>    
+            </div>
+        </div>
+
+        <div class="mb-2 row">
+            <div class="col-md-6">No Telepon</div>
+            <div class="col-md-6">
+            <p class="fw-bold"><?php echo $data['no_telp']?></p>    
+            </div>
+        </div>
+
+        <div class="mb-2 row">
+            <div class="col-md-6">Email</div>
+            <div class="col-md-6">
+            <p class="fw-bold">
+            <?php echo $data['email']?>
+            </p>
+            </div>
+        </div>
+
+
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+
+<?php }?>
+</div>
+
 </body>
+
 </html>

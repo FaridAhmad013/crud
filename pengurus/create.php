@@ -7,6 +7,7 @@
     <title>Pengurus</title>
 </head>
 <body>
+    <?php include '../layout/navbar.php';?>
     <form action="/pengurus/proses.php" method="post">
         <input type="hidden" name="aksi" value="create">
 
