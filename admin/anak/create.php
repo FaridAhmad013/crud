@@ -1,4 +1,5 @@
 <?php
+include '../_session.php';
 include '../../database.php';
 $pengurus = new Pengurus();
 ?>
@@ -31,7 +32,7 @@ $pengurus = new Pengurus();
 
                     <div class="form-check mb-2">
                         <label class="label-form-check" for="nama">Nama</label>
-                        <input type="text" name="nama" id="nama" class="form-control">
+                        <input type="text" name="nama" id="nama" class="form-control" required>
                     </div>
 
                     <div class="form-check mb-2 d-flex">
@@ -49,12 +50,13 @@ $pengurus = new Pengurus();
 
                     <div class="form-check mb-2">
                         <label class="label-form-check" for="nik">NIK</label>
-                        <input type="number" name="nik" id="nik" class="form-control">
+                        <input type="number" name="nik" id="nik" class="form-control" required>
                     </div>
 
                     <div class="form-check mb-2">
                         <label class="label-form-check" for="agama">Agama</label>
-                        <select name="agama" id="agama" class="form-control form-select">
+                        <select name="agama" id="agama" class="form-control form-select" required>
+                            <option value="">Pilih</option>
                             <option value="Islam">Islam</option>
                             <option value="Kristen">Kristen</option>
                             <option value="Hindu">Hindu</option>
@@ -65,18 +67,19 @@ $pengurus = new Pengurus();
 
                     <div class="form-check mb-2">
                         <label class="label-form-check" for="tanggal_lahir">Tanggal Lahir</label>
-                        <input type="date" name="tanggal_lahir" id="tangga_lahir" class="form-control">
+                        <input type="date" name="tanggal_lahir" id="tangga_lahir" class="form-control" required>
                     </div>
 
                     <div class="form-check mb-2">
                         Jenis Kelamin
-                        <label class="label-form-check mx-4" for="l"><input type="radio" name="jenis_kelamin" id="l" value="Laki-laki" class="form-check-input">Laki-laki</label>
-                        <label class="label-form-check" for="p"><input type="radio" name="jenis_kelamin" id="p" value="Perempuan" class="form-check-input">Perempuan</label>
+                        <label class="label-form-check mx-4" for="l"><input type="radio" name="jenis_kelamin" id="l" value="Laki-laki" class="form-check-input" required>Laki-laki</label>
+                        <label class="label-form-check" for="p"><input type="radio" name="jenis_kelamin" id="p" value="Perempuan" class="form-check-input" required>Perempuan</label>
                     </div>
 
                     <div class="form-check mb-2">
                         <label class="label-form-check" for="id_pengurus">Pengurus</label>
-                        <select name="id_pengurus" id="id_pengurus" class="form-control form-select">
+                        <select name="id_pengurus" id="id_pengurus" class="form-control form-select" required>
+                            <option value="">Pilih</option>
                             <?php
                             foreach ($pengurus->index() as $data) { ?>
                                 <option value="<?php echo $data['id'] ?>"><?php echo $data['nama'] ?></option>
@@ -85,7 +88,7 @@ $pengurus = new Pengurus();
                     </div>
                     
                     <div class="form-check mb-2">
-                    <button type="submit" name="save" class="btn btn-primary">Tambah</button>
+                    <button type="submit" name="save" class="btn btn-primary text-light">Tambah</button>
                     </div>
                     
 

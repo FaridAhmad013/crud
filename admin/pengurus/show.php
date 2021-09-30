@@ -1,4 +1,5 @@
 <?php
+include '../_session.php';
 include '../../database.php';
 $pengurus = new Pengurus();
 ?>
@@ -24,7 +25,7 @@ $pengurus = new Pengurus();
   <div class="row g-0">
 
     <div class="col-md-4">
-      <img src="/asset/img/img1.jpeg" class="img-fluid rounded-start" alt="...">
+      <img src="/asset/img/unknown.jpg" class="img-fluid rounded-start" alt="...">
     </div>
 
     <div class="col-md-8">

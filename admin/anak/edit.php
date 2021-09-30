@@ -1,4 +1,6 @@
-<?php include '../../database.php';
+<?php 
+include '../_session.php';
+include '../../database.php';
 $pengurus = new Pengurus();
 $anakPanti = new Anak();
 ?>

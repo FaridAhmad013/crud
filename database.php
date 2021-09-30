@@ -17,6 +17,9 @@
             if(!$this->koneksi){
                 echo "gagal";
             }
+
+            
+            
         }
         
 
@@ -24,5 +27,8 @@
 
     include 'anak.php';
     include 'pengurus.php';
+    include 'uang.php';
+    include 'pemasukan.php';
+    include 'pengeluaran.php';
     // include 'anak.php';
     $database = new Database();

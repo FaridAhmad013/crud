@@ -9,6 +9,8 @@
         <a class="nav-link active" aria-current="page" href="/admin/">Beranda</a>
         <a class="nav-link" href="/admin/pengurus/index.php">Pengurus</a>
         <a class="nav-link" href="/admin/anak/index.php">Anak</a>
+        <a class="nav-link" href="/admin/uang/donasi/index.php">Pemasukan</a>
+        <a class="nav-link" href="/admin/uang/pengeluaran/index.php">Pengeluaran</a>
         <a class="nav-link" href="/logout.php">Logout</a>
       </div>
     </div>

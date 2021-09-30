@@ -1,3 +1,4 @@
+<?php include '../_session.php'?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +35,7 @@
                                 <a href="/admin/anak/create.php" type="submit" class="btn btn-primary d-flex">Tambah</a>
                             </div>
 
-                            <table class="table text-center ">
+                            <table class="table text-center">
                                 <thead class="bg-primary text-light">
                                     <th>No</th>
                                     <th>Nama</th>
@@ -53,7 +54,7 @@
                                             <td><?php echo $index += 1 ?></td>
                                             <td><?php echo $data['nama'] ?></td>
                                             <td><?php echo $data['jenis_kelamin'] ?></td>
-                                            <td><?php echo $data['nama'] ?></td>
+                                            <td><?php echo $data['nama_pengurus'] ?></td>
                                             <td><?php echo $data['status'] ?></td>
                                             <td><a class="btn btn-info text-light" href="/admin/anak/show.php?id=<?php echo $data['id'] ?>">Show</a></td>
                                             <td><a class="btn btn-success" href="/admin/anak/edit.php?id=<?php echo $data['id'] ?>">Edit</a></td>
@@ -86,6 +87,8 @@
         </div>
 
     </div>
+
+    
 
 
 </body>
