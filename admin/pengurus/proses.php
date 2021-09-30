@@ -1,6 +1,6 @@
 <?php       
 
-    include '../database.php';
+    include '../../database.php';
     $pengurus = new Pengurus();
 
     if(isset($_POST['save'])){
@@ -16,11 +16,11 @@
 
         if($aksi == "create"){
             $pengurus->create($nama, $jenisKelamin, $agama, $tanggalLahir, $noTelp, $email, $alamat);
-            header('location:create.php');
+            header('location:index.php');
         }else if($aksi == "update"){
             $pengurus->update($nama, $jenisKelamin, $agama, $tanggalLahir, $noTelp, $email, $alamat, $id);
             header('location:index.php');
-        }else if($aksi == "delete"){
+        }else if($aksi == "destroy"){
             $pengurus->destroy($id);
             header('location:index.php');
         }

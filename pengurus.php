@@ -26,8 +26,10 @@
         
         public function update($nama, $jenisKelamin, $agama, $tanggalLahir, $noTelp, $email, $alamat, $id)
         {
-            return mysqli_query($this->koneksi, "UPDATE pengurus SET nama = '$nama', jenis_kelamin = '$jenisKelamin',
-            agama = '$agama', tanggal_lahir = '$tanggalLahir', no_telp = '$noTelp', email = '$email', alamat = '$alamat' WHERE id='$id'");
+            return mysqli_query($this->koneksi, 
+            "UPDATE pengurus SET nama = '$nama', jenis_kelamin = '$jenisKelamin',
+            agama = '$agama', tanggal_lahir = '$tanggalLahir', no_telp = '$noTelp', email = '$email', alamat = '$alamat' 
+            WHERE id='$id'");
         }
 
         public function destroy($id)

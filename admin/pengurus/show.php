@@ -1,5 +1,5 @@
 <?php
-include '../database.php';
+include '../../database.php';
 $pengurus = new Pengurus();
 ?>
 
@@ -10,12 +10,12 @@ $pengurus = new Pengurus();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Data Diri Pengurus</title>
     <link rel="stylesheet" href="/asset/css/bootstrap.min.css">
 </head>
 
 <body>
-<?php include '../layout/navbar.php';?>
+<?php include '../../layout/navbar.php';?>
 
 <?php foreach($pengurus->show($_GET['id']) as $data) {?>
   <div class="d-flex justify-content-center align-items-center my-5">
@@ -83,9 +83,8 @@ $pengurus = new Pengurus();
 
 </div>
 
-<?php }?>
 </div>
-
+<?php }?>
 </body>
 
 </html>
