@@ -12,6 +12,7 @@
         $tanggal = $_POST['tanggal'];
 
         if($aksi == "create"){
+        // echo "$idUang, $namaPengeluaran $total $tanggal $idPengeluaran";
            $pengeluaran->create($idUang, $namaPengeluaran, $total, $tanggal);
            header('location:index.php');
         }else if($aksi == 'update'){

@@ -48,5 +48,8 @@
         </div>
 
     </form>
+
+    <script src="/asset/js/bootstrap.min.js"></script>
+
 </body>
 </html>

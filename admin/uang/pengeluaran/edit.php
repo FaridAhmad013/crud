@@ -45,7 +45,7 @@ $pengeluaran = new Pengeluaran();
                         <div class="form-check mb-2">
                             <label for="total" class="label-form-check">Total</label>
                             <?php foreach ($saldo->index() as $dataSaldo) { ?>
-                                <input type="number" name="total" id="total" max="<?php echo $dataSaldo['saldo'] ?>" value="<?php echo $data['total']?>" class="form-control">
+                                <input type="number" name="total" id="total"  value="<?php echo $data['total']?>" class="form-control">
                             <?php } ?>
                         </div>
 
@@ -65,5 +65,8 @@ $pengeluaran = new Pengeluaran();
         <?php } ?>
         </div>
     </form>
+
+    <script src="/asset/js/bootstrap.min.js"></script>
+
 </body>
 </html>

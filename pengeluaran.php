@@ -10,7 +10,7 @@
 
         public function create($idUang, $namaPengeluaran, $total, $tanggal)
         {
-            return mysqli_query($this->koneksi, "INSERT INTO pengeluaran VALUES (null, $idUang, $namaPengeluaran, $total, $tanggal)");
+            return mysqli_query($this->koneksi, "INSERT INTO pengeluaran VALUES (null, '$idUang', '$namaPengeluaran', '$total', '$tanggal')");
         }
 
         public function edit($idPengeluaran)

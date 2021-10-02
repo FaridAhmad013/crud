@@ -85,6 +85,9 @@ $anakPanti = new Anak();
         </div>
 
     <?php } ?>
+
+    <script src="/asset/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>

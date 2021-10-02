@@ -54,11 +54,15 @@
                             foreach($pemasukan->totalPemasukan() as $totalS){
                                 $saldo =  $totalS['total_pemasukan'];
                                 foreach($pengeluaran->totalPengeluaran() as $totalP){
-                                    $saldoku = $saldo-$totalP['total_pengeluaran'];
+                                    $saldoku = $totalP['total_pengeluaran'];
                                 }
                             }
 
-                            echo number_format($saldoku, 2, ',', ',');
+                            $totalSaldo = $saldo - $saldoku;
+
+                            $uang->totalSaldo($totalSaldo);
+
+                            echo number_format($totalSaldo, 2, ',', ',');
                             
                             ?>
                         </div>
@@ -74,7 +78,7 @@
                     <div class="card-body">
                         <div class="card-title d-flex justify-content-between align-items-center">
                             <div>Pengeluaran</div>
-                            <a href="/admin/uang/pengeluaran/index.php" class="btn btn-danger"><i class="bi bi-journal-plus">-</i></a>
+                            <a href="/admin/uang/pengeluaran/create.php" class="btn btn-danger"><i class="bi bi-journal-plus">-</i></a>
                         </div>
 
                         <div class="fw-bold">
@@ -95,7 +99,7 @@
                     <div class="card-body">
                         <div class="card-title d-flex justify-content-between align-items-center">
                         <div>Pemasukan</div>
-                            <a href="/admin/uang/donasi/index.php" class="btn btn-primary"><i class="bi bi-journal-plus">+</i></a>
+                            <a href="/admin/uang/donasi/create.php" class="btn btn-primary"><i class="bi bi-journal-plus">+</i></a>
                         </div>
 
                         <div class="fw-bold">
@@ -117,6 +121,8 @@
     </div>
 
     </div>
+
+    <script src="/asset/js/bootstrap.min.js"></script>
 
 
 </body>

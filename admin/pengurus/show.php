@@ -86,6 +86,9 @@ $pengurus = new Pengurus();
 
 </div>
 <?php }?>
+
+<script src="/asset/js/bootstrap.min.js"></script>
+
 </body>
 
 </html>
